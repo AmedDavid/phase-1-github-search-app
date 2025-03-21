@@ -3,31 +3,36 @@
   <meta charset='UTF-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'/>
-  <title>Document</title>
-  <script src='js/index.js'></script>
+  <title>GitHub Explorer</title>
   <link rel='stylesheet' href='index.css'/>
 </head>
 <body>
-  <div id='main'>
+  <header>
+    <h1>GitHub Explorer</h1>
+  </header>
 
-    <h2>GitHub Search</h2>
+  <main id='main'>
+    <section class="search-container">
+      <form id='github-form'>
+        <div class="input-group">
+          <input id='search' type='text' name='search' placeholder="Search GitHub...">
+          <input type='submit' value='Search'/>
+        </div>
+      </form>
+    </section>
 
-    <form id='github-form'>
-      <input id='search' type='text' name='search'>
-      <input type='submit' name='submit'/>
-    </form>
+    <section id='github-container'>
+      <div class="results-container">
+        <h3>Users</h3>
+        <ul id='user-list'></ul>
+      </div>
+      <div class="results-container">
+        <h3>Repositories</h3>
+        <ul id='repos-list'></ul>
+      </div>
+    </section>
+  </main>
 
-    <div id='github-container'>
-      <ul id='user-list'>
-
-      </ul>
-
-      <ul id='repos-list'>
-
-      </ul>
-    </div>
-
-  </div>
-
+  <script src='js/index.js'></script>
 </body>
 </html>
